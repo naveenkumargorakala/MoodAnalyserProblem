@@ -9,17 +9,17 @@ public class MoodAnalyserTest {
     static MoodAnalyser moodAnalyser;
     @BeforeAll
     public static void init(){
-        moodAnalyser = new MoodAnalyser();
+        moodAnalyser = new MoodAnalyser("I am in Sad Mood");
         System.out.println("Implement to all");
     }
     @Test
     void givenMessageWhenCheckedReturnSad(){
-        String mood=moodAnalyser.analyseMood("I am in sad Mood");
+        String mood=moodAnalyser.analyseMood();
         Assertions.assertEquals("SAD",mood);
     }
     @Test
     void givenMessageWhenCheckedReturnHappy(){
-        String mood = moodAnalyser.analyseMood("I am in Any Mood");
+        String mood = moodAnalyser.analyseMood();
         Assertions.assertEquals("Happy",mood);
     }
 }

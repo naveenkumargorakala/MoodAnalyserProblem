@@ -1,7 +1,18 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class MoodAnalyser {
-    public String analyseMood(String message){
+    String message;
+
+    public MoodAnalyser() {
+    }
+
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood(){
         if (message.equalsIgnoreCase("I am in sad Mood")){
             return "SAD";
         }else
